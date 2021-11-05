@@ -228,6 +228,8 @@ class RecipeExpand extends HTMLElement {
     const rating = this.shadowRoot.querySelector('.rating--wrapper');
     const numStars = Math.round(ratingVal);
     if (ratingVal) {
+      // I have no clue why the path doesn't work. It should be using the relative path
+      // to my GitHub repo, but it uses the one attached to GitHub Pages. 
       rating.innerHTML = `
       <img src="assets/images/icons/${numStars}-star.svg" alt="${numStars} stars">
       <span>${ratingVal}</span>
